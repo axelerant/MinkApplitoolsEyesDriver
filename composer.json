@@ -1,0 +1,25 @@
+{
+  "name": "axelerant/mink-applitools-eyes-driver",
+  "description": "Applitools Eyes SDK (WebDriver) driver for Mink framework",
+  "keywords": ["applitools", "eyes", "webdriver", "javascript", "ajax", "testing", "browser"],
+  "type": "mink-driver",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hussain Abbas",
+      "email": "hussainweb@gmail.com",
+      "homepage": "http://hussainweb.me"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "behat/mink": "~1.7@dev"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Axelerant\\ApplitoolsEyes\\Driver\\": "src/"
+    }
+  }
+}
