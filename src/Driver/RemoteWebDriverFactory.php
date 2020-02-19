@@ -3,7 +3,6 @@
 namespace Axelerant\ApplitoolsEyes\Driver;
 
 use Behat\MinkExtension\ServiceContainer\Driver\Selenium2Factory;
-use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\DependencyInjection\Definition;
 
@@ -35,6 +34,7 @@ class RemoteWebDriverFactory extends Selenium2Factory
           $config['request_timeout_in_ms'],
           $config['http_proxy'],
           $config['http_proxy_port'],
+          $config['required_capabilities'],
         ]);
     }
 
@@ -77,6 +77,7 @@ class RemoteWebDriverFactory extends Selenium2Factory
             ->scalarNode('request_timeout_in_ms')->defaultValue(null)->end()
             ->scalarNode('http_proxy')->defaultValue(null)->end()
             ->scalarNode('http_proxy_port')->defaultValue(null)->end()
+            ->scalarNode('required_capabilities')->defaultValue(null)->end()
         ->end();
         parent::configure($builder);
     }
