@@ -72,7 +72,7 @@ class RemoteWebDriverFactory extends Selenium2Factory
     public function configure(ArrayNodeDefinition $builder)
     {
         $builder->children()
-            ->scalarNode('browser')->defaultValue('%mink.browser_name%')->end()
+            ->scalarNode('browserName')->defaultValue('%mink.browser_name%')->end()
             ->scalarNode('connection_timeout_in_ms')->defaultValue(null)->end()
             ->scalarNode('request_timeout_in_ms')->defaultValue(null)->end()
             ->scalarNode('http_proxy')->defaultValue(null)->end()
@@ -92,7 +92,8 @@ class RemoteWebDriverFactory extends Selenium2Factory
         // Override default browser to chrome
         $node
             ->children()
-            ->scalarNode('browser')->defaultValue('chrome')->end()
+            ->scalarNode('browser')->defaultValue('%mink.browser_name%')->end()
+            ->scalarNode('browserName')->defaultValue('%mink.browser_name%')->end()
             ->end();
         return $node;
     }

@@ -15,7 +15,8 @@
     "php": ">=7.2",
     "applitools/eyes.sdk.php": "dev-master",
     "behat/mink": "~1.7@dev",
-    "behat/mink-extension": "^2.3"
+    "behat/mink-extension": "^2.3",
+    "behat/mink-selenium2-driver": "*"
   },
   "require-dev": {
   },
